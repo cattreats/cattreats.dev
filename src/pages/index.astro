@@ -1,0 +1,93 @@
+---
+import Base from "../layouts/base.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<Base title="Catnip ⋆｡°✩">
+  <div
+    class="font-jost bg-ctp-surface0/75 flex flex-col rounded-lg p-4 backdrop-blur-md md:max-w-lg"
+  >
+    <div class="flex flex-row">
+      <img
+        src="images/pfp.gif"
+        class="h-32 rounded-full"
+        alt="Catnip's profile photo"
+      />
+      <div class="align-left m-4 flex flex-col gap-0.5">
+        <h1 class="text-ruby font-cooper text-6xl font-extrabold">Catnip</h1>
+        <p class="text-ctp-subtext1 text-xl">she/her</p>
+      </div>
+    </div>
+    <p class="text-ctp-subtext1 text-2xl font-medium" id="username">
+      @cattreats
+    </p>
+
+    <p>
+      i'm catnip, a furry. :( <br /> i like to listen to music while i play games.
+      i also like taking pictures of animals (like cats and dogs). my sona is a black
+      cat with big round glasses, and she's themed after my favourite drink (monster
+      ultra ruby red) :3c
+    </p>
+    <div class="text-ctp-subtext1 flex justify-center gap-1 text-3xl">
+      <a
+        href="https://discord.com/users/1408956378600702042"
+        target="_blank"
+        rel="me"
+        data-hover-name="@catniptreats"
+        class="icons hover:text-ruby"
+      >
+        <Icon name="fa7-brands:discord" id="discord" />
+      </a>
+      <a
+        href="https://github.com/cattreats"
+        target="_blank"
+        rel="me"
+        class="icons hover:text-ruby"
+      >
+        <Icon name="fa7-brands:github" />
+      </a>
+      <a
+        href="https://signal.cattreats.dev"
+        target="_blank"
+        rel="me"
+        data-hover-name="@cattreats.01"
+        class="icons hover:text-ruby"
+      >
+        <Icon name="fa7-brands:signal-messenger" />
+      </a>
+      <a
+        href="mailto:catnip@cattreats.dev"
+        target="_blank"
+        rel="me"
+        data-hover-name="catnip@cattreats.dev"
+        class="icons hover:text-ruby"
+      >
+        <Icon name="fa7-regular:envelope" />
+      </a>
+    </div>
+  </div>
+
+  <script is:inline>
+    const nameText = document.getElementById("username");
+    const defaultName = "@cattreats";
+    const icons = document.querySelectorAll(".icons");
+    icons.forEach((element) => {
+      const newName = element.dataset.hoverName;
+      if (!newName) {
+        return;
+      }
+      element.addEventListener("mouseover", () => {
+        nameText.textContent = newName;
+      });
+      element.addEventListener("focus", () => {
+        nameText.textContent = newName;
+      });
+      element.addEventListener("mouseout", () => {
+        nameText.textContent = defaultName;
+      });
+      element.addEventListener("blur", () => {
+        nameText.textContent = defaultName;
+      });
+    });
+  </script>
+</Base>
