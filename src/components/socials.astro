@@ -1,0 +1,14 @@
+---
+const { hover, icon, link } = Astro.props;
+import { Icon } from "astro-icon/components";
+---
+
+<a
+  href=`${link}`
+  target="_blank"
+  rel="me"
+  data-hover-name=`${hover}`
+  class="icons hover:text-ruby"
+>
+  <Icon name=`${icon}` />
+</a>
