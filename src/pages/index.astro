@@ -1,54 +1,22 @@
 ---
-import Base from "../layouts/base.astro";
-import Social from "../components/socials.astro";
 ---
+<head>
+<title>Welcome to nginx!</title>
+<style>
+html { color-scheme: light dark; }
+body { width: 35em; margin: 0 auto;
+font-family: Tahoma, Verdana, Arial, sans-serif; }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
 
-<Base title="Shade ⋆｡°✩">
-  <div
-    class="font-itim bg-ctp-surface0/75 flex max-w-sm flex-col rounded-lg p-4 backdrop-blur-md md:max-w-md"
-  >
-    <div class="flex flex-row">
-      <img
-        src="images/pfp.gif"
-        class="h-32 rounded-full"
-        alt="Shade's profile photo"
-      />
-      <div class="align-left m-4 flex flex-col gap-0.5">
-        <h1 class="text-ruby text-6xl font-extrabold">Shade</h1>
-        <p class="text-ctp-subtext1 text-xl">she/her :3</p>
-      </div>
-    </div>
-    <p class="text-ctp-subtext1 text-2xl font-medium" id="username">
-      @cattreats
-    </p>
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
 
-    <p>
-      i'm Shade <span class="text-ctp-overlay2"
-        >(or Treats, Charlotte, or Catnip)</span
-      >, a furry <span class="whitespace-nowrap">;(</span><br /> my favourite colours
-      are <span class="text-ourple">purple</span> and <span class="text-ruby"
-        >pink</span
-      > &mdash; the pink being the basis for my sona (which, itself, is based off
-      my favourite monster flavour, ultra ruby red) <span
-        class="whitespace-nowrap">&gt;.&lt;</span
-      >
-    </p>
-    <div class="text-ctp-subtext1 mt-4 flex justify-center gap-1 text-3xl">
-      <Social
-        hover="@catniptreats"
-        icon="fa7-brands:discord"
-        link="https://discord.com/users/1408956378600702042"
-      />
-      <Social
-        hover="@knottedcat"
-        icon="fa7-brands:github"
-        link="https://github.com/knottedcat"
-      />
-      <Social
-        hover="@cattreats.01"
-        icon="fa7-brands:signal-messenger"
-        link="https://signal.me/#eu/_9_k1N_O5FsZVG-68SUK70vPFicWxSWS6HGAfsDKnakUXIqgXHpEp5UVNDux5WkQ"
-      />
-    </div>
-  </div>
-</Base>
+<p><em>Thank you for using nginx.</em></p>
+</body>
