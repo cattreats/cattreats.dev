@@ -1,54 +1,80 @@
 ---
-import Base from "../layouts/base.astro";
-import Social from "../components/socials.astro";
+import Main from "../layouts/main.astro";
+import Social from "../components/social.astro";
 ---
 
-<Base title="Charlotte ⋆｡°✩">
-  <div
-    class="font-itim bg-ctp-surface0/75 flex max-w-sm flex-col rounded-lg p-4 backdrop-blur-md md:max-w-md"
-  >
-    <div class="flex flex-row">
+<Main title="somnocat">
+  <div class="bg-rose-pine-surface/65 text-rose-pine-subtle flex flex-col gap-8 rounded-lg p-4 backdrop-blur-md md:grid md:w-5xl md:grid-cols-3">
+    <div class="bg-rose-pine-overlay/65 col-span-2 row-span-2 flex items-center gap-4 rounded-lg p-2 md:order-0 md:flex-row">
       <img
-        src="images/pfp.gif"
-        class="h-32 rounded-full"
-        alt="Charlotte's profile photo"
+        src="/img/pfp.jpg"
+        alt="Charlotte's profile picture"
+        class="ml-4 h-16 w-16 rounded-full md:h-32 md:w-32"
+        loading="lazy"
       />
-      <div class="align-left m-4 flex flex-col gap-0.5">
-        <h1 class="text-ruby text-6xl font-extrabold">Charlotte</h1>
-        <p class="text-ctp-subtext1 text-xl">she/her :3</p>
+      <div class="order-1 flex flex-col p-2">
+        <h1 class="text-rose-pine-text text-3xl font-bold md:text-4xl">Charlotte</h1>
+        <span class="text-md md:text-lg"><span id="username">@somnocat</span> <span>• she/her</span></span>
+        <div class="mt-2 flex gap-1 text-2xl md:text-4xl">
+          <Social
+            hover="@somnocat"
+            icon="fa7-brands:github"
+            link="https://github.com/somnocat"
+          />
+          <Social
+            hover="@somnocat"
+            icon="fa7-brands:discord"
+            link="https://discord.com/users/1408956378600702042"
+          />
+          <Social
+            hover="@catgirlpuppy.01"
+            icon="fa7-brands:signal-messenger"
+            link="https://signal.me/#eu/Yj2KIwG3CTRCPVOJPg7bm_Mmagzpjq17UnbhWO3buIVFRpti6-RJmJZxrgISZDgo"
+          />
+          <Social
+            hover="@stressfulpuppy"
+            icon="fa7-brands:twitter"
+            link="https://twitter.com/stressfulpuppy"
+          />
+        </div>
       </div>
     </div>
-    <p class="text-ctp-subtext1 text-2xl font-medium" id="username">
-      @cattreats
-    </p>
-
-    <p>
-      i'm Charlotte <span class="text-ctp-overlay2"
-        >(or Shade, Treats, or Catnip)</span
-      >, a furry <span class="whitespace-nowrap">;(</span><br /> my favourite colours
-      are <span class="text-ourple">purple</span> and <span class="text-ruby"
-        >pink</span
-      > &mdash; the pink being the basis for my sona (which, itself, is based off
-      my favourite monster flavour, ultra ruby red) <span
-        class="whitespace-nowrap">&gt;.&lt;</span
-      >
-    </p>
-    <div class="text-ctp-subtext1 mt-4 flex justify-center gap-1 text-3xl">
-      <Social
-        hover="@catniptreats"
-        icon="fa7-brands:discord"
-        link="https://discord.com/users/1408956378600702042"
-      />
-      <Social
-        hover="@knottedcat"
-        icon="fa7-brands:github"
-        link="https://github.com/knottedcat"
-      />
-      <Social
-        hover="@cattreats.01"
-        icon="fa7-brands:signal-messenger"
-        link="https://signal.me/#eu/_9_k1N_O5FsZVG-68SUK70vPFicWxSWS6HGAfsDKnakUXIqgXHpEp5UVNDux5WkQ"
+    <div class="bg-rose-pine-overlay/65 order-3 col-span-1 row-span-4 flex flex-col gap-1 rounded-lg p-2 md:order-0">
+      <h2 class="text-rose-pine-text text-xl font-bold md:text-2xl">projects!</h2>
+      <ul>
+        <li>
+          <h3 class="text-rose-pine-love leading-relaxed font-bold md:text-xl">NestRec</h3>
+          <p class="text-md leading-relaxed md:text-lg">
+            i'm currently working on NestRec, a google <span class="font-bold">nest</span> hub <span class="font-bold">rec</span>reation meant to be more private and have no voice assistant. i hope to finish it soon and open source it when i'm done! but, like everything, i'm held back by cost of parts. 😵‍💫 for its 'software', i am currently using astro and javascript.
+          </p>
+        </li>
+        <li>
+          <h3 class="font-bold md:text-xl">...</h3>
+          <p class="md:text-lg">i don't really have any more projects... <span class="text-nowrap">:3</span></p>
+        </li>
+      </ul>
+    </div>
+    <div class="bg-rose-pine-overlay/65 order-2 col-span-2 row-span-3 flex flex-col gap-1 rounded-lg p-2 md:order-0">
+      <h2 class="text-rose-pine-text text-xl font-bold md:text-2xl">about me</h2>
+      <p class="text-md leading-relaxed md:text-lg">i'm Charlotte, <!-- <span class="text-rose-pine-muted italic">(or Shade, Catnip),</span>--> a (sixteen-year-old) very stressed puppygirl. <span class="text-nowrap">:(</span></p>
+      <p class="text-md leading-relaxed md:text-lg">i'm a furry, too. my self-named sona (who's part-cat, part-dog) is loosely based off the colours of the monster ultra fantasy ruby red!</p>
+      <p class="text-md leading-relaxed md:text-lg">i am not a developer, but i'm reasonably comfortable with some things, like html or basic javascript. i hope to major in IT, if that's still an industry when I graduate... <span class="text-nowrap">:c</span> day to day, i use windows & vscode, and an ipad from my school. i am reasonably comfortable using linux on both servers and clients. i also really like portal. <span class="text-nowrap">:D</span></p>
+    </div>
+    <div class="bg-rose-pine-overlay/65 order-4 col-span-1 col-start-3 row-span-1 row-start-5 flex items-center justify-center rounded-lg md:order-0">
+      <!-- i actually think this is too wide for it's text, but what am i to do? -->
+      <img
+        alt="somnocat's discord profile widget"
+        src="https://lanyard.cnrad.dev/api/1408956378600702042?hideActivity=true&showDisplayName=true&hideSpotify=true&bg=00000000"
+        class="md:h-fit"
       />
     </div>
   </div>
-</Base>
+  <div class="bg-rose-pine-surface/40 text-rose-pine-subtle mt-6 rounded-full p-2 underline underline-offset-2 backdrop-blur-md">
+    <a
+      href="http://github.com/somnocat/cattreats.dev"
+      target="_blank"
+      rel="noopener noreferrer"
+      >made by a person. 𐂂</a
+    >
+  </div>
+</Main>

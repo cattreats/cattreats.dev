@@ -1,6 +1,5 @@
 # cattreats.dev
 
-files for my website, https://cattreats.dev  
-:3
-
-written in astro, tailwind & javascript :p
+these are the files for my website :3  
+-> https://cattreats.dev <-  
+its in astro & tailwind, and i host it with cloudflare :p

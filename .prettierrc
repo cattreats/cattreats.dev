@@ -1,5 +1,7 @@
 {
   "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
+  "printWidth": 1000,
+  "singleAttributePerLine": true,
   "overrides": [
     {
       "files": "*.astro",
